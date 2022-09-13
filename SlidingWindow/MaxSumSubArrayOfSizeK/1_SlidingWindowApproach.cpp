@@ -1,4 +1,14 @@
 //Link: https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
+/*
+How to identify if a problem is of Sliding Window?
+1) Given    :     array/string
+2) To find  :     subarray/substring            (of window size K)
+3) Which is :     largest/maximum/least etc
+
+There are two types of Sliding Window Problems:
+1) Fixed Size Window Problems(K is given) to find maximum sum, etc.
+2) Variable Size Window Problems(K is not give, sum or some fixed parameter is given). and find the maximum/minimum length of subarray/substring.
+*/
 
 long maximumSumSubarray(int K, vector<int> &Arr , int N){
     int max_sum = INT_MIN;
