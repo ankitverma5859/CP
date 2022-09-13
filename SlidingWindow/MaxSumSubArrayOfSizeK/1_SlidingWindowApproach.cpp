@@ -11,6 +11,28 @@ There are two types of Sliding Window Problems:
 */
 
 long maximumSumSubarray(int K, vector<int> &Arr , int N){
+    long long max_sum = INT_MIN;
+
+    long long sum = 0;
+    for(int i=0,j=0; j<N;)
+    {
+        sum += Arr[j];
+        if(j-i+1<K)
+            j++;
+        else
+        {
+            max_sum = max(max_sum, sum);
+            sum = sum - Arr[i];
+            j++;
+            i++;
+        }
+    }
+
+    return max_sum;
+}
+
+/*
+long maximumSumSubarray(int K, vector<int> &Arr , int N){
     int max_sum = INT_MIN;
 
     int sum = 0;
@@ -31,3 +53,4 @@ long maximumSumSubarray(int K, vector<int> &Arr , int N){
     }
     return max_sum;
 }
+*/
