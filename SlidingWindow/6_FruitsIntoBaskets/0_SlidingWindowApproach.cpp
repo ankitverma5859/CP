@@ -1,3 +1,4 @@
+// Link: https://leetcode.com/problems/fruit-into-baskets/
 class Solution {
 public:
     int totalFruit(vector<int>& fruits) {
