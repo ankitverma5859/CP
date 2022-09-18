@@ -1,5 +1,6 @@
 // Link: https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
 // Using Prefix Sum
+// Approach: If you find prefix sum at two places as same, that means i+1 to j(last prefix) sum = 0.
 class Solution{
     public:
     int maxLen(vector<int>&A, int n)
