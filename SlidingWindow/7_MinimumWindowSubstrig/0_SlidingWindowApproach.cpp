@@ -4,7 +4,10 @@ public:
     string minWindow(string s, string t) {
         int n = s.size();
         int k = t.size();
-        cout<<n<<" "<<t.size()<<endl;
+        
+        /*
+            Conditions to return empty string.
+        */
         if(n == 0 or k == 0 or n < k)
             return "";
         
@@ -51,8 +54,12 @@ public:
             
             j++;    
         }
-        cout<<endl<<"I: "<<res_index.first<<" J: "<<res_index.second<<endl;
         string r1 = "";
+        
+        /*
+            For cases like s = "a" and t ="b" the res_index will now change and the 
+            below condition to return empty string for it.
+        */
         if(res_index.first != -1)
         {
             for(int i=res_index.first; i<=res_index.second; i++)
