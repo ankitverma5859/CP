@@ -1,5 +1,10 @@
 // Link: https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
-
+/*
+    Approach: Select the meeting which ends first.
+    Create a vector/struct to store start_time, end_time, and the index;
+    Sort ds by the end time, if end time is equal then by the postion in ascending order.
+    Pick the meetings if start of current is greater than prev_end_time.
+*/
 class Solution
 {
     struct meeting{
