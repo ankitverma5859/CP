@@ -1,4 +1,5 @@
 // Link: https://practice.geeksforgeeks.org/problems/subset-sums2234/1
+// Powerset method
 
 class Solution
 {
