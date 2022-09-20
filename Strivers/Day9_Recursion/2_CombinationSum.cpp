@@ -1,4 +1,5 @@
 // Link: https://leetcode.com/problems/combination-sum/
+// Explanation: https://leetcode.com/problems/combination-sum/discuss/1777334/C%2B%2BorDetailed-Explanation-w-TREE-DIAGRAMor-RECURSION-%2B-BACKTRACKINGor-EACH-STEP-EXPLAINED
 
 class Solution {
 public:
