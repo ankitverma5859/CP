@@ -1,0 +1,94 @@
+// Link: https://leetcode.com/problems/maximal-rectangle/
+// Approach: We find the largest area with each base from first row.
+//           And then find the maximum of the area of the each rows.
+
+class Solution {
+public:
+    vector<int> nextSmallestIndex(vector<int>& base){
+        int n = base.size();
+        
+        vector<int> res(n);
+        stack<int> s;
+        s.push(-1);
+        
+        for(int i=n-1; i>=0; i--){
+            int curr = base[i];
+            
+            while(s.top() != -1 and base[s.top()] >= curr)
+                s.pop();
+            
+            res[i] = s.top();
+            s.push(i);
+        }
+        return res;
+    }
+    
+    vector<int> prevSmallestIndex(vector<int>& base){
+        int n = base.size();
+
+        vector<int> res(n);
+        stack<int> s;
+        s.push(-1);
+
+        for(int i=0; i<n; i++){
+            int curr = base[i];
+
+            while(s.top() != -1 and base[s.top()] >= curr)
+                s.pop();
+
+            res[i] = s.top();
+            s.push(i);
+        }
+        return res;
+    }
+    
+    int getAreaOfHist(vector<int>& base){
+        vector<int> next = nextSmallestIndex(base);
+        vector<int> prev = prevSmallestIndex(base);
+        
+        int a = INT_MIN;
+        for(int i=0; i<base.size(); i++){
+            int l,w;
+            if(next[i] == -1)
+                next[i] = base.size();
+            
+            l = next[i] - prev[i] - 1;
+            w = base[i];
+            int new_a = l*w;
+            a = max(a, new_a);
+        }
+        return a;
+    }
+    
+    int maximalRectangle(vector<vector<char>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+        
+        // Calculating the current base values;
+        vector<int> base(m, 0);
+        for(int i=0; i<m; i++){
+            if(matrix[0][i] == '1')
+                base[i] = 1;
+            else 
+                base[i] = 0;
+        }
+        int area = getAreaOfHist(base);
+                
+        for(int i=1; i<n; i++)
+        {
+            for(int j=0; j<m; j++){
+                int val = matrix[i][j] == '1' ? 1 : 0;
+                
+                // Important: We only increament the value if the index has 1
+                // If it is already 0, then it cannot be included in the rectangle.
+                if(val != 0)
+                    base[j] = base[j] + val;
+                else 
+                    base[j] = 0;
+            }
+            int newArea = getAreaOfHist(base);
+            area = max(area, newArea);
+        }   
+        return area;
+    }
+};
