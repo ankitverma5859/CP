@@ -1,3 +1,21 @@
+/*
+INPUT:
+5
+
+Bangalore Hyderabad
+
+Bangalore Chennai
+
+Hyderabad Mumbai
+
+Hyderabad Delhi
+
+Chennai Kerala
+
+Bangalore
+
+*/
+
 // Link: https://discuss.codechef.com/t/interview-question-of-springworks-editorial/93073
 
 #include<bits/stdc++.h>
