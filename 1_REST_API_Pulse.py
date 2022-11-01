@@ -6,6 +6,9 @@ def find_avg(data, diagnosis_name, doc_id):
     sum = 0
     cnt = 0
     j_data = json.loads(data)
+    # json.dumps helps to indent the json data
+    #j_formatted = json.dumps(j_data, indent=2)
+    #print(j_formatted)
     total_entries = len(j_data['data'])
     if total_entries > 0:
         for i in range(total_entries):
@@ -33,3 +36,4 @@ print(f"Total Sum: {total_sum} Total Count: {total_cnt}")
 print(f"Average: {total_sum/total_cnt}")
 print(f"Average: {math.trunc(total_sum/total_cnt)}")
 print(f"Average: {int(total_sum/total_cnt)}")
+
