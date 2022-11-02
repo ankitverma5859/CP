@@ -8,7 +8,7 @@ int solve(int i, int j, vector<vector<int>>& grid, vector<vector<int>>& dp){
         return grid[i][j];
     
     if(i<0 or j<0)
-        return 10000; //a large number so that it is not considered in min function
+        return 1e9+7; //a large number so that it is not considered in min function
     
     if(dp[i][j] != -1) return dp[i][j];
     
