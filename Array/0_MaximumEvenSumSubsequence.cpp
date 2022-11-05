@@ -16,9 +16,9 @@ int main() {
         Approach:
             1. Find the sum of all the positive integers.
             2. If the sum is even, you got your answer.
-            3. If the sum is not ever:
-            4.        Find max of (positive_sum - positive_odd_integers[i])
-            5.        Find max of (positive_sum + negative_odd_integers[i])
+            3. If the sum is not even(i.e sum is Odd):
+            4.        Find max of (positive_sum - positive_odd_integers[i]). // Odd - Odd = Even
+            5.        Find max of (positive_sum + negative_odd_integers[i]). // Odd + (Odd) = Even
     */
     int n;
     cin>>n;
