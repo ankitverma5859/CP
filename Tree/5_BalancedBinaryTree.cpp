@@ -11,6 +11,12 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+/*
+    Balanced Binary Tree is :
+                Height(Left Subtree) - Height(Right Subtree) <= 1
+    
+*/
 class Solution {
 public:
     int check(TreeNode* root){
