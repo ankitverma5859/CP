@@ -64,3 +64,38 @@ class Solution:
             total_sum += divisors_sum
         
     	return total_sum
+    
+'''
+Approach 3:
+Take Example of 6:
+F(6) + F(5) + F(4) + F(3) + F(2) + F(1)
+
+F(6) = 1 * 2 * 3 * 6
+F(5) = 1 * 5
+F(4) = 1 * 2 * 4
+F(3) = 1 * 3
+F(2) = 1 * 2
+F(1) = 1
+
+Basicall, In the total_sum, 1 appears 6x, 2 appears 3x, 3 appears 2x, 4 appears 1x, 5 appears 1x, 6 appears 1x
+sum =  (6*1)     +     (3*2)      +     (2*3)      +     (1*4)     +     (1*5)   +    (6/6)*1   
+      (6/1)*1         (6/2)*2          (6/3)*3          (6/4)*4        (6/5)*6.       (6/6)*6
+      
+      
+
+i = 1 to N
+    (N/i)*i
+'''
+class Solution:
+
+    def sumOfDivisors(self, N):
+        total_sum = 0
+        
+        for i in range(1, N+1):
+            total_sum += int(N/i)*i
+        
+    	return total_sum
+
+
+
+
