@@ -1,6 +1,26 @@
 '''
-
+https://leetcode.com/problems/rotate-array/description/
 '''
+
+# Approach: Rotate the array k times
+# Not efficient
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        nums_size = len(nums)
+
+        k %= nums_size
+        
+        # Rotate by k 
+        for itr in range(k):
+            # Rotate by 1 
+            temp = nums[nums_size - 1]
+            for i in range(nums_size-1, 0, -1):
+                nums[i] = nums[i-1]
+            nums[0] = temp 
+
+        return
+    
+    
 # Approach: Using Slicing
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
