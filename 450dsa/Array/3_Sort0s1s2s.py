@@ -7,7 +7,8 @@ Approach1: Sort the array
 
 Approach2: Count 0s, 1s, 2s
            Replace the elements in the array with the counts
-           Complexity: O(n)
+           Time Complexity: O(n)
+	   Space Complexity: of a[3]
            
 Approach:   Dutch National Flag Problem Solution
             Time Complexity: O(n) : becuase mid++ and high-- we iterate one step at a time
