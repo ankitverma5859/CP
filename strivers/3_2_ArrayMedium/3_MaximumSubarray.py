@@ -5,7 +5,7 @@ Kadane Algorithm
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        max_so_far = 0
+        max_so_far = float("-inf")
         current_sum = 0
 
         for num in nums:
