@@ -30,14 +30,29 @@ class Solution:
                     l = mid + 1
                 else:
                     r = mid - 1
+                    
+                    
+# Only one binary search.
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l = 0
+        r = len(nums) - 1
 
-            return -1
+        while l <= r:
+            mid = (l+r)//2
+            if nums[mid] == target:
+                return mid
 
-        peak_index = find_peak_index(nums)
-        if peak_index == -1:  # no peak index, i.e no rotation, hence search in all
-            return binary_search(nums, 0, len(nums) - 1, target)
-        else:
-            if target >= nums[peak_index] and target <= nums[len(nums) - 1]:
-                return binary_search(nums, peak_index, len(nums)-1, target)
-            else:
-                return binary_search(nums, 0, peak_index - 1, target)
+            # At any midpoint either the left part is sorted or the right part is sorted. We search in the sorted part
+
+            if nums[l] <= nums[mid]: # left part is sorted
+                if target >= nums[l] and target <= nums[mid]:
+                    r = mid - 1
+                else:
+                    l = mid + 1
+            else: # right part is sorted
+                if target >= nums[mid] and target <= nums[r]:
+                    l = mid + 1
+                else:
+                    r = mid - 1
+        return -1
