@@ -43,11 +43,11 @@ class Solution:
             
             # Check if first element is the peak element
             if mid == 0:
-                return 0 if nums[0] > nums[1] else 1
+                return mid if nums[0] > nums[1] else mid+1
 
             # Check if last element is the peak element
             if mid == nums_len - 1:
-                return  nums_len-1 if nums[nums_len-1] > nums[nums_len - 2] else nums_len - 2
+                return mid if nums[nums_len-1] > nums[nums_len - 2] mid - 1
 
             if nums[mid] >= nums[mid-1] and nums[mid] >= nums[mid+1]:
                 return mid
