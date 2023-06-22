@@ -1,0 +1,137 @@
+## Question
+What is SQL?
+SQL stands for Structured Query Language. It is a programming language used for managing and manipulating relational databases. 
+SQL provides a standardized way to interact with databases, allowing users to perform various operations such as creating, modifying, 
+and querying databases and their respective tables.
+
+With SQL, you can perform tasks such as:
+1. Creating databases and tables: 
+SQL provides commands for creating databases and defining the structure of tables, 
+including specifying column names, data types, constraints, and relationships between 
+tables.
+
+2. Inserting, updating, and deleting data: 
+You can use SQL statements to insert new records into tables, update existing records, 
+and delete unwanted data from tables.
+
+3. Querying data: 
+SQL offers a rich set of commands for retrieving specific data from databases. You can 
+use the SELECT statement to specify  the columns and conditions to filter the data you 
+want to retrieve.
+
+4. Modifying table structure: 
+SQL allows you to alter the structure of tables, including adding or dropping columns, 
+modifying data types, and applying constraints.
+
+5. Managing database security: SQL provides commands to manage user access and permissions, 
+allowing you to control who can view or modify the data in a database.
+
+SQL is widely used in various database management systems, such as MySQL, Oracle Database, 
+Microsoft SQL Server, PostgreSQL, and SQLite. It is a fundamental tool for working with 
+structured data and is essential for tasks involving data storage, retrieval, and manipulation 
+in relational databases.
+
+## Question
+What are the subsets of sql or types of sql commands?
+SQL commands can be broadly categorized into the following subsets:
+
+1. Data Definition Language (DDL): DDL commands are used to define and manage 
+the structure of the database objects. They include commands such as:
+
+   - CREATE: Creates a new database, table, view, index, or other database objects.
+   - ALTER: Modifies the structure of existing database objects, such as tables or columns.
+   - DROP: Deletes a database, table, view, index, or other database objects.
+   - TRUNCATE: Removes all data from a table, while keeping the table structure intact.
+
+2. Data Manipulation Language (DML): DML commands are used to manipulate and work with the 
+data within the database. They include commands such as:
+
+   - SELECT: Retrieves data from one or more tables.
+   - INSERT: Inserts new data into a table.
+   - UPDATE: Modifies existing data in a table.
+   - DELETE: Deletes data from a table.
+
+3. Data Control Language (DCL): DCL commands are used to control access and permissions to 
+the database objects. They include commands such as:
+
+   - GRANT: Provides user permissions to access specific database objects.
+   - REVOKE: Removes user permissions to access specific database objects.
+
+4. Transaction Control Language (TCL): TCL commands are used to manage transactions, which are 
+units of work performed within a database. They include commands such as:
+
+   - COMMIT: Saves all the changes made in the transaction.
+   - ROLLBACK: Reverts all the changes made in the transaction.
+   - SAVEPOINT: Creates a point in the transaction from which it can be rolled back.
+
+These subsets of SQL commands provide the necessary tools to define, manipulate, control access, 
+and manage transactions within a database system. The specific syntax and capabilities of these 
+commands may vary slightly depending on the database management system being used.
+
+## Question
+What is the sequence of execution in sql?
+FROM > WHERE > GROUP BY > HAVING > SELECT > ORDER BY > LIMIT
+
+## Question
+Advantages and Disadvantages of SQL
+SQL (Structured Query Language) has several advantages and disadvantages, which are outlined below:
+
+Advantages of SQL:
+
+1. Ease of Use: 
+SQL has a simple and intuitive syntax that makes it easy to learn and use. Its declarative 
+nature allows users to specify what they want to retrieve or modify without needing to 
+specify how to do it. This makes SQL accessible to users with varying levels of technical expertise.
+
+2. Portability: 
+SQL is a standardized language that is supported by most relational database management systems 
+(RDBMS). This means that SQL code written for one database system can often be used with minimal 
+or no modifications on other database systems, providing a degree of portability.
+
+3. Versatility: 
+SQL provides a comprehensive set of commands for managing databases, querying data, and performing 
+data manipulation operations. It supports a wide range of operations, including data retrieval, 
+insertion, update, and deletion, as well as creating and modifying database structures.
+
+4. Scalability: 
+SQL databases can handle large amounts of data and scale to accommodate growing data volumes. 
+They can efficiently manage complex queries, indexes, and relationships, making them suitable 
+for handling both small and large-scale applications.
+
+5. Data Integrity: 
+SQL supports various integrity constraints, such as unique constraints, foreign key constraints, 
+and check constraints. These constraints help ensure the accuracy and consistency of the data 
+stored in the database.
+
+Disadvantages of SQL:
+
+1. Limited Support for Unstructured Data: 
+SQL is primarily designed for structured data stored in tables with predefined schemas. 
+It may not be the ideal choice for handling unstructured or semi-structured data, such 
+as documents, multimedia files, or hierarchical data.
+
+2. Performance Considerations: 
+While SQL databases are generally efficient, complex queries or poorly optimized queries 
+can impact performance. It requires careful database design, appropriate indexing, and 
+query optimization techniques to ensure optimal performance.
+
+3. Scalability Challenges: 
+While SQL databases can handle large volumes of data, scaling them horizontally 
+(across multiple servers) can be challenging. Distributed databases or NoSQL solutions 
+may be more suitable for certain types of scalability requirements.
+
+4. Vendor Dependencies: 
+Although SQL is a standardized language, different database management systems may 
+have variations in syntax, features, and optimizations. This can create vendor 
+dependencies, making it challenging to switch between different database systems 
+without modifying the SQL code.
+
+5. Steep Learning Curve for Advanced Features: 
+While SQL is easy to learn for basic querying and manipulation, mastering advanced 
+features such as stored procedures, triggers, and complex joins may require additional 
+effort and expertise.
+
+It's important to note that the advantages and disadvantages of SQL can vary depending 
+on the specific use case, requirements, and the choice of database management system.
+
+
